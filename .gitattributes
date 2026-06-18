@@ -1,0 +1,10 @@
+# Force LF line endings on checkout for everyone.
+# These scripts run on Linux clusters and inside containers, where Windows CRLF
+# endings would break bash (run.sh) and other tools.
+* text=auto eol=lf
+
+*.sh     text eol=lf
+*.nf     text eol=lf
+*.config text eol=lf
+*.py     text eol=lf
+*.md     text eol=lf

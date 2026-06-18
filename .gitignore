@@ -1,0 +1,54 @@
+# ============================================================================
+# .gitignore — files that should never be committed
+# ============================================================================
+
+# --- Pipeline-generated execution profile (holds your cluster account & cache paths) ---
+run_profile.conf
+
+# --- Nextflow runtime & outputs ---
+work/
+.nextflow/
+.nextflow.log*
+.nextflow.pid
+Results/
+results/
+pipeline_info/
+
+# --- Container image caches ---
+.singularity_cache/
+.apptainer/
+.conda/
+
+# --- Python bytecode (regenerated from bin/*.py at runtime) ---
+__pycache__/
+*.py[cod]
+
+# --- Large bioinformatics data: never commit (prevents accidental huge commits) ---
+*.bam
+*.bai
+*.cram
+*.crai
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.tbi
+*.fa
+*.fasta
+*.fai
+*.gff
+*.gff3
+*.gff.gz
+*.gff3.gz
+*.bed
+*.bed.gz
+*.bw
+*.bigWig
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
